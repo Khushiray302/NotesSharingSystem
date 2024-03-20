@@ -1,0 +1,182 @@
+{% extends 'usernavigation.html'%}
+{% load static %}
+{% block body %}
+
+{% if error == "no" %}
+     <script>
+	   alert('Your Message has been Send Successfully');
+	   window.location = '/contact/';
+     </script>
+{% endif %}
+
+{% if error == "yes" %}
+     <script>
+	    alert('Something went wrong, Try Again');
+     </script>
+{% endif %}
+<br><br><br><br>
+<section class="contact" id="contact">
+<h1 class="heading mt-5">Feedback</h1>
+
+<div class="row">
+
+    <form method="post">
+        {% csrf_token %}
+        <input type="text" placeholder="full name" name="fullname" class="box">
+        <input type="email" placeholder="your email" name="email" class="box">
+        <input type="number" placeholder="your contact number" name="mobile" class="box">
+        <input type="text" placeholder="Subject" name="subject" class="box">
+        <textarea name="message" id="" cols="30" rows="8" class="box address" placeholder="Send Message..."></textarea>
+        <input type="submit" class="btn" value="send now">
+    </form>
+
+   
+</div>
+</section>
+<style>
+    .btn{
+        background: brown;
+    }
+    .contact {
+        background: #f7e0e0;
+    }
+    section {
+        min-height: 100vh;
+        padding: 1rem 7%;
+        padding-top: 6rem;
+    }
+    * {
+        font-family: 'Open Sans', sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        border: none;
+        outline: none;
+        text-decoration: none;
+        text-transform: capitalize;
+        transition: all .2s linear;
+    }
+    user agent stylesheet
+    section {
+        display: block;
+    }
+    :root {
+        --gradient: linear-gradient(90deg, #f1c40f, #f39c12);
+    }
+    @media (max-width: 500px){
+    html {
+        font-size: 50%;
+    }
+}
+    @media (max-width: 768px){
+    html {
+        font-size: 55%;
+    }
+    html {
+        font-size: 62.5%;
+        overflow-x: hidden;
+    }
+}
+    *::selection {
+        background: #f39c12;
+        color: #fff;
+    }
+    section {
+    min-height: 100vh;
+    padding: 1rem 7%;
+    padding-top: 6rem;
+}
+* {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+}   
+*::selection {
+    background: #f39c12;
+    color: #fff;
+}
+.contact .row form {
+    flex: 1 1 50rem;
+    background: rgb(238, 240, 243);
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 3rem;
+    align-items: flex-start;
+}
+@media (max-width: 500px){
+.contact .row form .box {
+    width: 100%;
+}
+}
+
+.contact .row form .box {
+    height: 5rem;
+    width: 49%;
+    border: .1rem solid #951515;
+    padding: 0 1rem;
+    margin: 1rem 0;
+    font-size: 1.7rem;
+    color: #120a0a;
+    background: none;
+    text-transform: none;
+    
+}
+input[type="text" i] {
+    writing-mode: horizontal-tb !important;
+    padding-block: 1px;
+    padding-inline: 2px;
+}
+
+* {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+}
+user agent stylesheet
+form {
+    display: block;
+    margin-top: 0em;
+    margin-block-end: 1em;
+}
+input {
+    text-rendering: auto;
+    color: fieldtext;
+    letter-spacing: normal;
+    word-spacing: normal;
+    line-height: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: start;
+    appearance: auto;
+    -webkit-rtl-ordering: logical;
+    cursor: text;
+    background-color: field;
+    margin: 0em;
+    padding: 1px 0px;
+    border-width: 2px;
+    border-style: inset;
+    border-color: -internal-light-dark(rgb(14, 6, 6), rgb(133, 133, 133));
+    border-image: initial;
+    padding-block: 1px;
+    padding-inline: 2px;
+}
+
+
+</style>
+{% endblock %}

@@ -1,0 +1,31 @@
+{% extends 'navigation.html'%}
+{% load static %}
+{% block body %}
+
+<section class="about" id="about">
+
+    <div class="image">
+        <img src="{% static 'images/Learning-amico.png' %}" alt="">
+    </div>
+    <style>
+         .about .content h3 {
+            font-size: 3.5rem;
+            color: black;
+            }
+           
+            .about .content p {
+    font-size: 1.5rem;
+    color:rgb(38, 9, 9);
+    padding: 1rem 0;
+}
+    </style>
+    
+    <div class="content">
+        <h3>All About Notes Sharing</h3>
+        <p>“Note Sharing System” is a system used for sharing notes using the website. Notes that the user wants for a particular subject can be found in the website. This system is developed using Python Django and sqlite. Firstly, the user need to sign up and then, they can log in to the system.</p>
+        <p>Notes Sharing System is a open source you can Download and edit notes as per you need.</p>
+
+    </div>
+
+</section>
+{% endblock %}

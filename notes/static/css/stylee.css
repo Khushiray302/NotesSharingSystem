@@ -1,0 +1,25 @@
+header{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top:0; left: 0;
+    z-index: 1000;
+    padding:1.5rem 7%;
+    background:blue;
+    box-shadow: 0 0.1rem 0.3rem rgba(0,0,0,.3);  
+}
+
+.btn{
+    background: brown;
+}
+
+.userlog form p a {
+    color: coral;
+}
+
+header .navbar ul li a.active{
+    color:white;
+}
+
